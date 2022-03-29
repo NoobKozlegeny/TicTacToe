@@ -19,16 +19,12 @@ namespace TicTacToe.Logic
 
         public void Click(int x, int y)
         {
-            if (!IsAITheWinner() && !IsPlayerTheWinner())
-            {
-                GameMatrix[x, y] = "X";
-
-            }
-            else if (IsPlayerTheWinner())
+            GameMatrix[x, y] = "X";
+            if (IsPlayerTheWinner())
             {
                 MessageBox.Show("You have won!");
             }
-            else
+            else if (IsAITheWinner())
             {
                 MessageBox.Show("You have lost!");
             }
