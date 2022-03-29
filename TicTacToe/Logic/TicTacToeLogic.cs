@@ -36,5 +36,66 @@ namespace TicTacToe.Logic
                 }
             }
         }
+        public bool IsX(int x, int y)
+        {
+            return GameMatrix[x, y] == "X" ? true : false;
+        }
+        public bool IsO(int x, int y)
+        {
+            return GameMatrix[x, y] == "O" ? true : false;
+        }
+
+        public bool IsPlayerTheWinner()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                if (IsX(i,0) && IsX(i,1) && IsX(i,2))
+                {
+                    return true;
+                }
+            }
+            for (int j = 0; j < 3; j++)
+            {
+                if (IsX(0,j) && IsX(1,j) && IsX(2,0))
+                {
+                    return true;
+                }
+            }
+            if(IsX(0,0) && IsX(1,1) && IsX(2,2))
+            {
+                return true;
+            }
+            else if (IsX(0,2) && IsX(1,1) && IsX(2,0))
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool IsAITheWinner()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                if (IsO(i, 0) && IsO(i, 1) && IsO(i, 2))
+                {
+                    return true;
+                }
+            }
+            for (int j = 0; j < 3; j++)
+            {
+                if (IsO(0, j) && IsO(1, j) && IsO(2, 0))
+                {
+                    return true;
+                }
+            }
+            if (IsO(0, 0) && IsO(1, 1) && IsO(2, 2))
+            {
+                return true;
+            }
+            else if (IsO(0, 2) && IsO(1, 1) && IsO(2, 0))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
