@@ -1,6 +1,7 @@
 ﻿namespace TicTacToe.Logic
 {
-    internal interface IGameControl
+    public interface IGameControl
     {
+        void Click(int x, int y);
     }
 }

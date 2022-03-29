@@ -1,6 +1,7 @@
 ﻿namespace TicTacToe.Logic
 {
-    internal interface IGameModel
+    public interface IGameModel
     {
+        string[,] GameMatrix { get; set; }
     }
 }
