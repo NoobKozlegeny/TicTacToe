@@ -7,6 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="X.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="X.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Controller\" />
     <Folder Include="Renderer\" />
     <Folder Include="Logic\" />
