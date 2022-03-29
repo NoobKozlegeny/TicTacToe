@@ -18,7 +18,11 @@ namespace TicTacToe.Logic
 
         public void Click(int x, int y)
         {
-            GameMatrix[x, y] = "X";
+            if (!IsAITheWinner() && !IsPlayerTheWinner())
+            {
+                GameMatrix[x, y] = "X";
+                AIMove();
+            }
         }
 
         public void AIMove()
