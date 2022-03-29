@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace TicTacToe.Logic
 {
@@ -21,8 +22,23 @@ namespace TicTacToe.Logic
             if (!IsAITheWinner() && !IsPlayerTheWinner())
             {
                 GameMatrix[x, y] = "X";
-                AIMove();
+
             }
+            else if (IsPlayerTheWinner())
+            {
+                MessageBox.Show("You have won!");
+            }
+            else
+            {
+                MessageBox.Show("You have lost!");
+            }
+            if (!IsAITheWinner() && !IsPlayerTheWinner())
+            {
+                AIMove();
+
+            }
+
+            
         }
 
         public void AIMove()
@@ -30,8 +46,8 @@ namespace TicTacToe.Logic
             bool MovedRight = false;
             while (!MovedRight)
             {
-                int randX = r.Next(0, 4);
-                int randY = r.Next(0, 4);
+                int randX = r.Next(0, 3);
+                int randY = r.Next(0, 3);
 
                 if (GameMatrix[randX,randY]==null)
                 {
