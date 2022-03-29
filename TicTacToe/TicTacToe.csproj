@@ -6,4 +6,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="Logic\" />
+    <Folder Include="Renderer\" />
+  </ItemGroup>
+
 </Project>
