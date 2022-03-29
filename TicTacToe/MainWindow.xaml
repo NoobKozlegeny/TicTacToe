@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:TicTacToe"
         xmlns:dp="clr-namespace:TicTacToe.Renderer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" SizeChanged="Window_SizeChanged" Loaded="Window_Loaded" MouseDown="Window_MouseDown">
+    <Grid x:Name="grid">
         <dp:Display x:Name="display"/>
     </Grid>
 </Window>

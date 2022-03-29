@@ -33,10 +33,11 @@ namespace TicTacToe.Renderer
 
             if (model != null && size.Width > 50 && size.Height > 50)
             {
-                double tileLength = size.Height / model.GameMatrix.GetLength(0);
+                double rectWidth = size.Width / model.GameMatrix.GetLength(1);
+                double rectHeight = size.Height / model.GameMatrix.GetLength(0);
 
                 drawingContext.DrawRectangle(Brushes.Black, new Pen(Brushes.Black, 0),
-                    new Rect(0, 0, tileLength, tileLength));
+                    new Rect(0, 0, rectWidth, rectHeight));
 
                 for (int i = 0; i < model.GameMatrix.GetLength(0); i++)
                 {
@@ -61,7 +62,7 @@ namespace TicTacToe.Renderer
 
                         drawingContext.DrawRectangle(imageBrush
                                     , new Pen(Brushes.Black, 0),
-                                    new Rect(j * tileLength, i * tileLength, tileLength, tileLength)
+                                    new Rect(j * rectWidth, i * rectHeight, rectWidth, rectHeight)
                                     );
                     }
                 }
