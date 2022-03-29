@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="Renderer\" />
     <Folder Include="Logic\" />
   </ItemGroup>
 
