@@ -52,11 +52,11 @@ namespace TicTacToe.Renderer
                                 break;
                             case "0":
                                 imageBrush = new ImageBrush(
-                                    new BitmapImage(new Uri(Path.Combine("img", "X.bmp"), UriKind.RelativeOrAbsolute)));
+                                    new BitmapImage(new Uri(Path.Combine("img", "O.bmp"), UriKind.RelativeOrAbsolute)));
                                 break;
                             default:
                                 imageBrush = new ImageBrush(
-                                    new BitmapImage(new Uri(Path.Combine("img", "X.bmp"), UriKind.RelativeOrAbsolute)));
+                                    new BitmapImage(new Uri(Path.Combine("img", "nothing.bmp"), UriKind.RelativeOrAbsolute)));
                                 break;
                         }
 
